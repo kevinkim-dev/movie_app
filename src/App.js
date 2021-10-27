@@ -7,9 +7,17 @@ class App extends React.Component{
   };
   add = () => {
     console.log('add')
+    this.setState(current => ({
+      count: current.count + 1
+      // count: this.state.count + 1 -> not recommend
+    }))
   };
   minus = () => {
     console.log('minus')
+    this.setState(current => ({
+      count: current.count - 1
+      // count: this.state.count - 1 -> not recommend
+    }))
   };
   render() {
     return <div>
